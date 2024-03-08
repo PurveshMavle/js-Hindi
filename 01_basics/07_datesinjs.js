@@ -37,4 +37,3 @@ Newdate.toLocaleString('default',{
     weekday:"long",
     
 })
-\
