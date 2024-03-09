@@ -55,23 +55,30 @@ console.log(TinderUser);
 // console.log((TinderUser.hasOwnProperty('isloggedin')))
 // console.log((TinderUser.hasOwnProperty('islogged')))
 
+
+//destructuring can be done on arrays also and objects also
+
 const course = {
   coursename :"js in hindi",
   price:"999",
   insturctor:"Purvesh"
 }
+
 // course.insturctor standard method
 
-const {insturctor:inst}=course//object destructuring
+const {insturctor:inst}=course//object destructuring syntax
 console.log(inst)
-
-// {
-//   "name":"purvesh",
-//   "coursename":"jsservices",
-//   "price":"free"
-// }
+// jab apna kaam kisi aur pe daal de toh use api hai
+/* JSON syntax in json the key and value both are in string 
+{
+  "name":"purvesh",
+  "coursename":"jsservices",
+  "price":"free"
+}
 [
   {},
   {},
   {}
 ]
+*/
+
