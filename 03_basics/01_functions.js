@@ -9,7 +9,7 @@ function saymyname(){
 
 }
 
-// saymyname()
+// saymyname() without parenthesis it is function refernce and to execute we have to add brackets
 
 function addtwonumber(number1,number2){
 //    let result=number1+number2
@@ -23,7 +23,8 @@ const result = addtwonumber(3,5)
 console.log("result", result);
 
 function loginusermessage (username="sam"){
-    if(!username){
+    if(!username)// its meaning is if the entered input is undefined so it will make it true with not operator and the if statment loop will be exceuted
+    {
         console.log("plz enter a username");
            return
     }
@@ -35,20 +36,22 @@ function loginusermessage (username="sam"){
 function calculatecartprice(val1,val2,...num1){
     return num1
 }
+
 const user ={
     username :"hitesh",
     price:199
 }
 
-console.log(calculatecartprice(200,400,800,2000))//(... )here it is called as rest operator
+console.log(calculatecartprice(200,400,800,2000))//(... )here it is called as rest operator also called as spread operator
 
 function handleobject(anyobject){
     console.log(`username is ${anyobject.username} and the price is ${anyobject.price}`);
 }
-handleobject({
-    username:"sam",
-    price:399
-})
+handleobject(user)
+// handleobject({
+//     username:"sam",
+//     price:399
+// })
 
 const mynewarray=[200,400,100,600]
 
