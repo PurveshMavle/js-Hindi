@@ -1,0 +1,52 @@
+JAVA script is single threaded inside it everything is a process
+
+
+execution context
+call stack [a memory] 
+
+
+********* JAVA script execution context ******
+whenever we give code to js it produces at first always i.e Global execution context (this variable is used to refer it eg in js it is empty string whereas in browser it shows window and other things)
+Global execution context
+Function execution context
+Eval execution context (its a property of global ec)
+
+1. phase is memory "creation phase"
+2. second phase is execution phase // difference between them is in first phase only memory is allocated to the variables and we cant excute any operation here 
+
+eg.let val1=10
+   let val2=5
+   Function addNum(num1,num2){
+    let total =num1+num2
+    return total
+   }
+   let result1 = addNum (val1,val2)
+   let result2 = addNum(10,2)
+
+step 1> global execution/environment: whatever the quantity of the code might be it should be run from global exc and "this" is assigned to it
+step 2 (first cycle) -> memory creation phase : all the variables are collected
+          for eg in above example in val1 : undefined will stored initially
+                                     val2 : undefined will stored initially
+                                     addNum : function definition will stored initially
+                                     result1:undefined
+                                     result2:undefined
+step 3 (second cycle) -> execution phase: in this values will assigned and operation are performed for eg in above example in val1:10
+                                     val2:5
+                                     addNum wil create its own execution context
+                                       ( New variable environment+ execution thread )
+                                       again the step 1 and step will be repeated for each function call
+                                       Memory phase             execution context
+                                       val1->undefined          num1 :10
+                                       val2->undefined          num2:5
+                                       total->undefined         total:15
+
+                                       total is returned to Global execution context
+
+                                       after the value is returned the new execution context that was created that will get delete by itself
+
+                                       result1 :15 // it will get the value
+
+                                       same repeat for second function call of result2
+
+                                       result2 :12 
+
