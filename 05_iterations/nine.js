@@ -25,3 +25,4 @@ const shoppingcart=[
 
 const pricetopay=shoppingcart.reduce((acc,item)=> acc+item.price,0)
 console.log(pricetopay);
+
