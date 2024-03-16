@@ -34,3 +34,37 @@ buttons.forEach(function (button) {
 });
 
 ```
+## project 2
+
+``` javascript
+const form = document.querySelector('form');
+
+form.addEventListener('submit', function (e) {
+  e.preventDefault(); // Prevent default form submission
+
+  const heightInput = parseInt(document.querySelector('#height').value) ;// Use querySelector for specificity
+  const weightInput = parseInt(document.querySelector('#weight').value);
+  const resultsElement = (document.querySelector('#results')); // Use querySelector for element
+
+  // Validate height input
+  if (isNaN(heightInput) || heightInput <= 0 ||heightInput=='') {
+    resultsElement.textContent = `Please enter a valid height (positive number)` // Clearer error message
+    
+  }
+ else  if (isNaN(weightInput) || weightInput <= 0 ||weightInput=='') {
+    resultsElement.textContent = `Please enter a valid weight (positive number)` // Clearer error message
+    
+  }
+  else{
+    const bmi =(weightInput/((heightInput*heightInput)/10000)).toFixed(2)
+    //show results 
+    resultsElement.innerHTML=`<span>${bmi}</span>`;
+  }
+});
+```
+
+## project 3
+``` javascript
+ 
+ 
+```
