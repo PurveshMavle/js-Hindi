@@ -1,0 +1,14 @@
+Javascript is a synchronous language i.e Synchronous code executes sequentially, one statement at a time.
+Each line of code waits for the previous line to finish before proceeding.
+When you invoke a function, it runs line by line, blocking the execution until that function completes.
+Imagine it as a queue where each task waits for its turn.
+The function execution stack (also known as the call stack) keeps track of the currently executing function.
+
+
+Javascript is a singleThreaded language i.e In JavaScript, single-threaded means that the language processes one command at a time in a single sequence. This means that JavaScript can only execute one piece of code at a time, even if multiple events occur
+
+blocking code :  it will block the flow of program 
+                 read file sync     
+
+Non blocking code :does not block execution
+                   read file async
